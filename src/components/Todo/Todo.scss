@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+.mainContainer {
+    font-family: 'Raleway';
+    font-weight: 300;
+    font-size: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    // width: 500px;
+}
+
+.title {
+    font-weight: 700;
+    color: white;
+
+    width: 500px;
+    background-color: rgb(17, 155, 235);
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 25px 25px 0 0;
+}
+
+// .tasksContainer {
+//     width: 500px;
+//     box-sizing: border-box;
+
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+
+// }
+
+.upperBlock {
+    display: flex;
+    height: 30px;;
+}
+
+.inputTask {
+    width: 350px;
+    margin: 0;
+    border-radius: 0;
+    border: 1px solid rgb(17, 155, 235);
+    padding: 5px 5px 5px 15px;
+
+    font-family: 'Raleway';
+    font-weight: 300;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.addTask {
+    width: 150px;
+    margin: 0;
+    border-radius: 0;
+    border: 1px solid rgb(17, 155, 235);
+
+    cursor: pointer;
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.addTask:hover {
+    background-color: rgb(193, 227, 246);
+    transition: 0.2s;
+}
+
+.tasks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    width: 500px;
+}
+
+.task:nth-child(even){
+    background-color: rgba(193, 227, 246, 0.5);
+}
+
+.task {
+    border: 1px solid rgb(17, 155, 235);
+    width: 500px;
+
+    padding: 10px 0 10px 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.checkbox, .deleteTask {
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+}
+
+
+.deleteTask {
+    padding: 0 5px 0 5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(17, 155, 235, 0);
+}
+
+.deleteTask:hover {
+    background-color: rgba(240, 240, 240, 1);
+    border: 1px solid rgb(17, 155, 235);
+}
+
+.checkTask {
+    text-decoration: line-through;
+}
+
+.withoutTask {
+    padding: 15px;
+}
+
+.taskTitle {
+    display: flex;
+    align-items: center;
+
+}
