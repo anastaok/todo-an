@@ -3,6 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import "./Todo.scss";
+import TodoItem from "./Todo/TodoItem/TodoItem";
 
 const Todo = () => {
   const API = "https://jsonplaceholder.typicode.com/todos?_start=0&_limit=10";
@@ -70,30 +71,13 @@ const Todo = () => {
         {todos.length ? (
           todos.map((task, index) => {
             return (
-              <div key={task.id} className="task">
-                <div
-                  className={`${task.completed ? "checkTask" : ""} taskTitle`}
-                >
-                  <input
-                    value={task.completed}
-                    onChange={() => checkTask(index)}
-                    type="checkbox"
-                    className="checkbox"
-                  />
-                  <div>
-                    {index + 1}&#46;&nbsp;
-                    {task.title}
-                  </div>
-                </div>
-                <div
-                  onClick={() => {
-                    deleteTask(task.id);
-                  }}
-                  className="deleteTask"
-                >
-                  &#10006;
-                </div>
-              </div>
+              <TodoItem
+                key={task.id}
+                task={task}
+                index={index}
+                checkTask={checkTask}
+                deleteTask={deleteTask}
+              />
             );
           })
         ) : (

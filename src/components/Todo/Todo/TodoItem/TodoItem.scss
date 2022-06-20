@@ -1,0 +1,43 @@
+.task {
+    border: 1px solid rgb(17, 155, 235);
+    width: 500px;
+
+    padding: 10px 0 10px 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task:nth-child(even){
+    background-color: rgba(193, 227, 246, 0.5);
+}
+
+
+.checkbox, .deleteTask {
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+}
+
+
+.deleteTask {
+    padding: 0 5px 0 5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(17, 155, 235, 0);
+}
+
+.deleteTask:hover {
+    background-color: rgba(240, 240, 240, 1);
+    border: 1px solid rgb(17, 155, 235);
+}
+
+.checkTask {
+    text-decoration: line-through;
+}
+
+.taskTitle {
+    display: flex;
+    align-items: center;
+}
